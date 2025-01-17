@@ -10,18 +10,10 @@ export default function Page() {
     return (
         <MainLayout language={lang}>
             <Head>
-                <title>
-                    {lang === 'en'
-                        ? 'AZChain - Revolutionary and Sustainable Blockchain Ecosystem'
-                        : 'AZChain - Hệ Sinh Thái Blockchain Đột Phá và Bền Vững'}
-                </title>
+                <title>NFT WAR | Own a Unique Digital Masterpiece</title>
                 <meta
                     name='description'
-                    content={
-                        lang === 'en'
-                            ? 'AZChain bridges blockchain technology with real-world assets, offering a secure, transparent, and efficient platform. With $AZC and AZGPay Wallet, we unlock new investment opportunities in real estate, agriculture, and decentralized e-commerce.'
-                            : 'AZChain kết nối công nghệ blockchain với tài sản thực, mang đến nền tảng an toàn, minh bạch và hiệu quả. Với $AZC và Ví AZGPay, chúng tôi mở ra cơ hội đầu tư mới trong các lĩnh vực bất động sản, nông nghiệp, và thương mại điện tử phi tập trung.'
-                    }
+                    content='Step into the rebellious world of NFT WAR, a collection of 10,000 hand-crafted digital masterpieces. Each NFT WAR is one of a kind, embodying the spirit of rebellion and individuality.'
                 />
             </Head>
             <Home />

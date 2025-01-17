@@ -5,7 +5,7 @@ export const Header = {
         position: sticky;
         top: 0;
         left: 0;
-        background: #1f1f1f;
+        background: #232531;
         color: white;
         z-index: 2;
 
@@ -35,12 +35,16 @@ export const Header = {
     `,
     Logo: styled.div`
         cursor: pointer;
+
+        > img {
+            height: 50px;
+        }
     `
 }
 
 export const Footer = {
     Container: styled.div`
-        background: #1f1f1f;
+        background: #232531;
         color: #dadada;
         font-size: 12px;
         padding: 30px 0;
@@ -83,6 +87,10 @@ export const Footer = {
         gap: 20px;
         align-items: center;
         justify-content: space-between;
+
+        > img {
+            max-width: 170px;
+        }
     `,
     RightMenu: styled.div`
         display: flex;

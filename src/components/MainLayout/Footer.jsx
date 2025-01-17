@@ -12,7 +12,7 @@ const FooterContainer = () => {
         <Footer.Container>
             <Container>
                 <Footer.Left>
-                    <img src='/images/logo.svg' />
+                    <img src='/images/logo.png' />
                     <Footer.LeftSocial>
                         <span>
                             Join To Our <br />

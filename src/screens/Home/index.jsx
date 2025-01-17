@@ -1,11 +1,13 @@
 import React, { useRef } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay, Navigation } from 'swiper/modules'
 
 import {
     AboutUs,
+    Collection,
     FAQ,
     Play,
     Presale,
-    Responsive,
     RoadMap,
     Theme,
     Title
@@ -13,14 +15,16 @@ import {
 import Container from '@/components/Container'
 import Button from '@/components/Button'
 import Question from './Question'
+import CountDown from './CountDown'
+import ArrowCircleIcon from '@/images/ArrowCricleIcon'
 
 import { useGlobalContext } from '@/context/GlobalContext'
-import CountDown from './CountDown'
 
 const Home = () => {
     const { t, isMobile } = useGlobalContext()
     const prevButtonRef = useRef(null)
     const nextButtonRef = useRef(null)
+    const swiperRef = useRef(null)
 
     const getImage = (imageName) => `./images/${imageName}.png`
 
@@ -68,6 +72,175 @@ const Home = () => {
                         <img src={getImage('home-theme-2')} />
                     </AboutUs.Right>
                 </AboutUs.Container>
+            </Container>
+
+            <Container>
+                <Collection.Container>
+                    <Collection.ButtonLeft>
+                        <button ref={prevButtonRef}>
+                            <ArrowCircleIcon
+                                fillColor='#7A7A7A'
+                                arrowColor='white'
+                                width={40}
+                            />
+                        </button>
+                    </Collection.ButtonLeft>
+                    <Collection.ButtonRight>
+                        <button ref={nextButtonRef}>
+                            <ArrowCircleIcon
+                                fillColor='#7A7A7A'
+                                arrowColor='white'
+                                width={40}
+                            />
+                        </button>
+                    </Collection.ButtonRight>
+
+                    <Swiper
+                        ref={swiperRef}
+                        slidesPerView={1}
+                        modules={[Navigation, Autoplay]}
+                        navigation={{
+                            prevEl: prevButtonRef.current,
+                            nextEl: nextButtonRef.current
+                        }}
+                        onBeforeInit={(swiper) => {
+                            swiper.params.navigation.prevEl =
+                                prevButtonRef.current
+                            swiper.params.navigation.nextEl =
+                                nextButtonRef.current
+                        }}
+                        loop={true}
+                        autoplay={{
+                            delay: 4000
+                        }}
+                    >
+                        <SwiperSlide>
+                            <Collection.Item>
+                                <img src={getImage('home-collection-1')} />
+
+                                <Collection.Content>
+                                    <p>New Characters</p>
+                                    <h2>TEKNO</h2>
+                                    <span>
+                                        Meet Tekno, the cutting-edge robot bird,
+                                        engineered for the future! with his
+                                        advanced technological prowess, Tekno is
+                                        on a mission to navigate the digital
+                                        skies to find and retrieve flappy bird
+                                    </span>
+                                </Collection.Content>
+                            </Collection.Item>
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <Collection.Item>
+                                <img src={getImage('home-collection-2')} />
+
+                                <Collection.Content>
+                                    <p>New Characters</p>
+                                    <h2 style={{ color: '#292D32' }}>PENG</h2>
+                                    <span>
+                                        Meet Peng, the adorably plump penguin
+                                        who dreams of soaring the skies! despite
+                                        his round frame, his determination and
+                                        cheerful spirit never wane, proving
+                                        anyone can achieve their dreams!
+                                    </span>
+                                </Collection.Content>
+                            </Collection.Item>
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <Collection.Item>
+                                <img src={getImage('home-collection-3')} />
+
+                                <Collection.Content>
+                                    <p>New Characters</p>
+                                    <h2 style={{ color: '#365FC0' }}>QUIRKY</h2>
+                                    <span>
+                                        Meet Peng, the adorably plump penguin
+                                        who dreams of soaring the skies! despite
+                                        his round frame, his determination and
+                                        cheerful spirit never wane, proving
+                                        anyone can achieve their dreams!
+                                    </span>
+                                </Collection.Content>
+                            </Collection.Item>
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <Collection.Item>
+                                <img src={getImage('home-collection-4')} />
+
+                                <Collection.Content>
+                                    <p>New Characters</p>
+                                    <h2 style={{ color: '#FFCC00' }}>TRIXY</h2>
+                                    <span>
+                                        Meet Peng, the adorably plump penguin
+                                        who dreams of soaring the skies! despite
+                                        his round frame, his determination and
+                                        cheerful spirit never wane, proving
+                                        anyone can achieve their dreams!
+                                    </span>
+                                </Collection.Content>
+                            </Collection.Item>
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <Collection.Item>
+                                <img src={getImage('home-collection-5')} />
+
+                                <Collection.Content>
+                                    <p>New Characters</p>
+                                    <h2 style={{ color: '#FFCC00' }}>TRIXY</h2>
+                                    <span>
+                                        Meet Peng, the adorably plump penguin
+                                        who dreams of soaring the skies! despite
+                                        his round frame, his determination and
+                                        cheerful spirit never wane, proving
+                                        anyone can achieve their dreams!
+                                    </span>
+                                </Collection.Content>
+                            </Collection.Item>
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <Collection.Item>
+                                <img src={getImage('home-collection-6')} />
+
+                                <Collection.Content>
+                                    <p>New Characters</p>
+                                    <h2 style={{ color: '#FFCC00' }}>TRIXY</h2>
+                                    <span>
+                                        Meet Peng, the adorably plump penguin
+                                        who dreams of soaring the skies! despite
+                                        his round frame, his determination and
+                                        cheerful spirit never wane, proving
+                                        anyone can achieve their dreams!
+                                    </span>
+                                </Collection.Content>
+                            </Collection.Item>
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <Collection.Item>
+                                <img src={getImage('home-collection-7')} />
+
+                                <Collection.Content>
+                                    <p>New Characters</p>
+                                    <h2 style={{ color: '#FFCC00' }}>TRIXY</h2>
+                                    <span>
+                                        Meet Peng, the adorably plump penguin
+                                        who dreams of soaring the skies! despite
+                                        his round frame, his determination and
+                                        cheerful spirit never wane, proving
+                                        anyone can achieve their dreams!
+                                    </span>
+                                </Collection.Content>
+                            </Collection.Item>
+                        </SwiperSlide>
+                    </Swiper>
+                </Collection.Container>
             </Container>
 
             <Presale.Container>

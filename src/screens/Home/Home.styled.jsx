@@ -4,7 +4,7 @@ export const Title = styled.div`
     font-size: 48px;
     line-height: 53px;
     font-weight: 700;
-    color: #ed1c24;
+    color: #625df5;
 
     @media (max-width: 992px) {
         font-size: 36px;
@@ -14,7 +14,7 @@ export const Title = styled.div`
 
 export const Theme = {
     Container: styled.div`
-        background: #1f1f1f;
+        background: #232531;
 
         > div {
             display: flex;
@@ -102,7 +102,7 @@ export const AboutUs = {
     Right: styled.div`
         flex: 1;
         aspect-ratio: 544/310;
-        background: #1f1f1f;
+        background: #232531;
         border-radius: 30px;
         position: relative;
 
@@ -120,15 +120,108 @@ export const AboutUs = {
     `
 }
 
+export const Collection = {
+    Container: styled.div`
+        position: relative;
+        margin-top: 200px;
+        padding: 0 150px;
+
+        @media (max-width: 1200px) {
+            padding: 0 90px;
+        }
+        @media (max-width: 992px) {
+            margin-top: 100px;
+            padding: 0 30px;
+        }
+    `,
+    ButtonLeft: styled.button`
+        position: absolute;
+        left: 40px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+
+        > button {
+            transform: rotate(180deg);
+        }
+
+        @media (max-width: 992px) {
+            left: -10px;
+
+            svg {
+                width: 30px;
+            }
+        }
+    `,
+    ButtonRight: styled.button`
+        position: absolute;
+        right: 40px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+
+        @media (max-width: 992px) {
+            right: -10px;
+
+            svg {
+                width: 30px;
+            }
+        }
+    `,
+    Item: styled.div`
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+        > img {
+            width: 323px;
+        }
+
+        @media (max-width: 992px) {
+            flex-direction: column-reverse;
+            gap: 20px;
+
+            > img {
+                width: 240px;
+            }
+        }
+    `,
+    Content: styled.div`
+        > p {
+            color: #232531;
+            font-size: 24px;
+            font-weight: 800;
+        }
+        > h2 {
+            color: #ff0000;
+            font-size: 48px;
+            font-weight: 800;
+        }
+        > span {
+            font-size: 14px;
+            line-height: 21px;
+        }
+
+        @media (max-width: 992px) {
+            \ > p {
+                font-size: 20px;
+            }
+            > h2 {
+                font-size: 40px;
+            }
+        }
+    `
+}
+
 export const Presale = {
     Container: styled.div`
-        margin-top: 150px;
+        margin-top: 200px;
 
         > div {
             display: flex;
             align-items: center;
             justify-content: space-around;
-            background: #1f1f1f;
+            background: #232531;
             border-radius: 30px;
         }
 
@@ -234,7 +327,7 @@ export const Play = {
         }
     `,
     LeftBox: styled.div`
-        background: #1f1f1f;
+        background: #232531;
         color: white;
         padding: 30px;
         border-radius: 30px;
@@ -259,7 +352,7 @@ export const Play = {
 
         > div {
             aspect-ratio: 464/418;
-            background: #ed1c24;
+            background: #625df5;
             border-radius: 30px;
             position: relative;
 
@@ -267,8 +360,8 @@ export const Play = {
                 width: 80%;
                 position: absolute;
                 left: 50%;
-                top: -10%;
-                transform: translateX(-50%);
+                top: 50%;
+                transform: translate(-50%, -50%);
             }
         }
 
@@ -317,7 +410,10 @@ export const RoadMap = {
     `,
     LeftImage: styled.div`
         position: relative;
+        max-width: 550px;
         bottom: -10%;
+        left: 50%;
+        transform: translateX(-50%);
 
         > img {
             width: 100%;
@@ -389,7 +485,7 @@ export const FAQ = {
     `,
     LeftImageWrapper: styled.div`
         aspect-ratio: 535/396;
-        background: #ed1c24;
+        background: #625df5;
         border-radius: 30px;
         position: relative;
 

@@ -22,7 +22,7 @@ const HeaderContainer = () => {
             <Container>
                 <Header.Left>
                     <Header.Logo>
-                        <img src='./images/logo.svg' />
+                        <img src='./images/logo.png' />
                     </Header.Logo>
 
                     <Header.LeftItem
