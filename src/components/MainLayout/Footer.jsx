@@ -8,6 +8,9 @@ import YoutubeIcon from '@/images/YoutubeIcon'
 import Button from '../Button'
 
 const FooterContainer = () => {
+    const goJoinNow = () =>
+        (window.location.href = 'https://t.me/BotGameFlappHero_bot?start=0000')
+
     return (
         <Footer.Container>
             <Container>
@@ -31,7 +34,9 @@ const FooterContainer = () => {
                 <Footer.Right>
                     <Footer.RightButton>
                         <img src='/images/home-footer.png' />
-                        <Button size='lg'>JOIN NOW</Button>
+                        <Button size='lg' onClick={goJoinNow}>
+                            JOIN NOW
+                        </Button>
                     </Footer.RightButton>
 
                     <Footer.RightMenu>

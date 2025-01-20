@@ -17,6 +17,11 @@ const HeaderContainer = () => {
         })
     }
 
+    const goJoinNow = () =>
+        (window.location.href = 'https://t.me/BotGameFlappHero_bot?start=0000')
+    const goPrivateSale = () =>
+        (window.location.href = 'https://wallet.flapphero.xyz/')
+
     return (
         <Header.Container>
             <Container>
@@ -51,7 +56,12 @@ const HeaderContainer = () => {
                     </Header.LeftItem>
                 </Header.Left>
 
-                <Button>JOIN NOW</Button>
+                <Header.Right>
+                    <Button outline='white' hideIcon onClick={goPrivateSale}>
+                        Private Sale
+                    </Button>
+                    <Button onClick={goJoinNow}>JOIN NOW</Button>
+                </Header.Right>
             </Container>
         </Header.Container>
     )

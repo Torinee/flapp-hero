@@ -7,7 +7,7 @@ export const Header = {
         left: 0;
         background: #232531;
         color: white;
-        z-index: 2;
+        z-index: 5;
 
         > div {
             height: 60px;
@@ -39,6 +39,10 @@ export const Header = {
         > img {
             height: 50px;
         }
+    `,
+    Right: styled.div`
+        display: flex;
+        gap: 8px;
     `
 }
 

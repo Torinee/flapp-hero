@@ -27,6 +27,10 @@ const Home = () => {
     const swiperRef = useRef(null)
 
     const getImage = (imageName) => `./images/${imageName}.png`
+    const goJoinNow = () =>
+        (window.location.href = 'https://t.me/BotGameFlappHero_bot?start=0000')
+    const goWhitePaper = () =>
+        (window.location.href = 'https://docs.flapphero.xyz/')
 
     return (
         <>
@@ -40,12 +44,19 @@ const Home = () => {
 
                     <Theme.Right>
                         <h1>
-                            NFT <br /> WAR
+                            FLAP <br /> HERO
                         </h1>
 
                         <div>
-                            <Button size='lg'>JOIN NOW</Button>
-                            <Button size='lg' outline='white' hideIcon>
+                            <Button size='lg' onClick={goJoinNow}>
+                                JOIN NOW
+                            </Button>
+                            <Button
+                                size='lg'
+                                outline='white'
+                                hideIcon
+                                onClick={goWhitePaper}
+                            >
                                 WHITEPAPER
                             </Button>
                         </div>
@@ -56,15 +67,16 @@ const Home = () => {
             <Container>
                 <AboutUs.Container>
                     <AboutUs.Left>
-                        <Title>Hey all, it's really me, WAR</Title>
+                        <Title>Flap Hero – The Unique Web 3 Game</Title>
 
                         <p>
-                            Dive into a world where the serene and peaceful War
-                            have decided to shake thing up. Each NFT WAR is a
-                            digital masterpiece, hand-crafted to showcase the
-                            spirit of rebellion and individuality. This
-                            collection features 10,000 unique War, each with its
-                            own distinctive traits.
+                            Flap Hero is a game inspired by Flappy Bird,
+                            combining Web 3 technology and Play-to-Earn (P2E)
+                            features. Players can earn real tokens by overcoming
+                            challenges and collecting exclusive NFTs. With fun
+                            graphics and challenging gameplay, Flap Hero offers
+                            an exciting gaming experience and the opportunity to
+                            earn. Join now and become a hero in the sky!
                         </p>
                     </AboutUs.Left>
 
@@ -116,35 +128,20 @@ const Home = () => {
                     >
                         <SwiperSlide>
                             <Collection.Item>
-                                <img src={getImage('home-collection-1')} />
+                                <img src={getImage('home-collection-4')} />
 
                                 <Collection.Content>
                                     <p>New Characters</p>
-                                    <h2>TEKNO</h2>
+                                    <h2 style={{ color: '#FFCC00' }}>
+                                        Skybound Sentinel (D)
+                                    </h2>
                                     <span>
-                                        Meet Tekno, the cutting-edge robot bird,
-                                        engineered for the future! with his
-                                        advanced technological prowess, Tekno is
-                                        on a mission to navigate the digital
-                                        skies to find and retrieve flappy bird
-                                    </span>
-                                </Collection.Content>
-                            </Collection.Item>
-                        </SwiperSlide>
-
-                        <SwiperSlide>
-                            <Collection.Item>
-                                <img src={getImage('home-collection-2')} />
-
-                                <Collection.Content>
-                                    <p>New Characters</p>
-                                    <h2 style={{ color: '#292D32' }}>PENG</h2>
-                                    <span>
-                                        Meet Peng, the adorably plump penguin
-                                        who dreams of soaring the skies! despite
-                                        his round frame, his determination and
-                                        cheerful spirit never wane, proving
-                                        anyone can achieve their dreams!
+                                        The Skybound Sentinel is a resilient and
+                                        agile hero, soaring through the skies
+                                        with unmatched speed and grace. With his
+                                        powerful wings and sharp reflexes, he
+                                        can dodge any obstacles and lead the way
+                                        in the battle for the skies.
                                     </span>
                                 </Collection.Content>
                             </Collection.Item>
@@ -156,13 +153,16 @@ const Home = () => {
 
                                 <Collection.Content>
                                     <p>New Characters</p>
-                                    <h2 style={{ color: '#365FC0' }}>QUIRKY</h2>
+                                    <h2 style={{ color: '#FFCC00' }}>
+                                        Bronze Talon (C)
+                                    </h2>
                                     <span>
-                                        Meet Peng, the adorably plump penguin
-                                        who dreams of soaring the skies! despite
-                                        his round frame, his determination and
-                                        cheerful spirit never wane, proving
-                                        anyone can achieve their dreams!
+                                        Bronze Talon is a fierce warrior with a
+                                        sharp, metallic beak and formidable
+                                        strength. Known for his tenacity and
+                                        precision, he is a master of aerial
+                                        combat, striking down enemies with his
+                                        powerful talons.
                                     </span>
                                 </Collection.Content>
                             </Collection.Item>
@@ -170,17 +170,42 @@ const Home = () => {
 
                         <SwiperSlide>
                             <Collection.Item>
-                                <img src={getImage('home-collection-4')} />
+                                <img src={getImage('home-collection-2')} />
 
                                 <Collection.Content>
                                     <p>New Characters</p>
-                                    <h2 style={{ color: '#FFCC00' }}>TRIXY</h2>
+                                    <h2 style={{ color: '#FFCC00' }}>
+                                        Steelred Dragon (B)
+                                    </h2>
                                     <span>
-                                        Meet Peng, the adorably plump penguin
-                                        who dreams of soaring the skies! despite
-                                        his round frame, his determination and
-                                        cheerful spirit never wane, proving
-                                        anyone can achieve their dreams!
+                                        The Steelred Dragon is a mighty and
+                                        aggressive beast with scales as hard as
+                                        steel. His fiery breath and crushing
+                                        strength make him a dangerous adversary.
+                                        A true warrior in the skies, he will
+                                        stop at nothing to conquer his foes.
+                                    </span>
+                                </Collection.Content>
+                            </Collection.Item>
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <Collection.Item>
+                                <img src={getImage('home-collection-1')} />
+
+                                <Collection.Content>
+                                    <p>New Characters</p>
+                                    <h2 style={{ color: '#FFCC00' }}>
+                                        Golden Saint King Dragon (A)
+                                    </h2>
+                                    <span>
+                                        The Golden Saint King Dragon is a
+                                        majestic and powerful creature, revered
+                                        for its ancient wisdom and unmatched
+                                        strength. With golden scales that
+                                        shimmer like the sun, he commands the
+                                        battlefield with his divine presence and
+                                        mighty roar.
                                     </span>
                                 </Collection.Content>
                             </Collection.Item>
@@ -192,13 +217,18 @@ const Home = () => {
 
                                 <Collection.Content>
                                     <p>New Characters</p>
-                                    <h2 style={{ color: '#FFCC00' }}>TRIXY</h2>
+                                    <h2 style={{ color: '#FFCC00' }}>
+                                        Fire God Dragon (S)
+                                    </h2>
                                     <span>
-                                        Meet Peng, the adorably plump penguin
-                                        who dreams of soaring the skies! despite
-                                        his round frame, his determination and
-                                        cheerful spirit never wane, proving
-                                        anyone can achieve their dreams!
+                                        The Fire God Dragon is a mighty
+                                        creature, imbued with the essence of
+                                        fire itself. His powerful flame breath
+                                        can melt even the toughest of enemies,
+                                        and his strength and resilience make him
+                                        a key ally in any battle. His fiery
+                                        spirit leads him to victory, no matter
+                                        the odds.
                                     </span>
                                 </Collection.Content>
                             </Collection.Item>
@@ -210,13 +240,18 @@ const Home = () => {
 
                                 <Collection.Content>
                                     <p>New Characters</p>
-                                    <h2 style={{ color: '#FFCC00' }}>TRIXY</h2>
+                                    <h2 style={{ color: '#FFCC00' }}>
+                                        Dark Shadow Wolf King (SS)
+                                    </h2>
                                     <span>
-                                        Meet Peng, the adorably plump penguin
-                                        who dreams of soaring the skies! despite
-                                        his round frame, his determination and
-                                        cheerful spirit never wane, proving
-                                        anyone can achieve their dreams!
+                                        The Dark Shadow Wolf King is a
+                                        mysterious and elusive figure, mastering
+                                        the art of stealth and darkness. With
+                                        the ability to vanish into shadows, he
+                                        strikes fear into his enemies before
+                                        they even realize he's near. His cunning
+                                        and strength make him a formidable
+                                        opponent.
                                     </span>
                                 </Collection.Content>
                             </Collection.Item>
@@ -228,13 +263,40 @@ const Home = () => {
 
                                 <Collection.Content>
                                     <p>New Characters</p>
-                                    <h2 style={{ color: '#FFCC00' }}>TRIXY</h2>
+                                    <h2 style={{ color: '#FFCC00' }}>
+                                        Child of the Fire God (SSS)
+                                    </h2>
                                     <span>
-                                        Meet Peng, the adorably plump penguin
-                                        who dreams of soaring the skies! despite
-                                        his round frame, his determination and
-                                        cheerful spirit never wane, proving
-                                        anyone can achieve their dreams!
+                                        Born from the flames, the Child of the
+                                        Fire God possesses the power of fire at
+                                        his fingertips. His fiery attacks can
+                                        scorch anything in his path, making him
+                                        a force to be reckoned with. With a
+                                        heart as passionate as the flames he
+                                        controls, he brings destruction to his
+                                        enemies.
+                                    </span>
+                                </Collection.Content>
+                            </Collection.Item>
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <Collection.Item>
+                                <img src={getImage('home-collection-8')} />
+
+                                <Collection.Content>
+                                    <p>New Characters</p>
+                                    <h2 style={{ color: '#FFCC00' }}>
+                                        Holy Sword King (SSS Max)
+                                    </h2>
+                                    <span>
+                                        The Holy Sword King is a legendary hero
+                                        wielding a divine sword capable of
+                                        cutting through anything in its path.
+                                        With unmatched power and unwavering
+                                        courage, he leads his allies to victory
+                                        in the toughest of battles, earning the
+                                        title of the ultimate hero.
                                     </span>
                                 </Collection.Content>
                             </Collection.Item>
@@ -311,39 +373,87 @@ const Home = () => {
                             {isMobile && <RoadMap.Title>ROADMAP</RoadMap.Title>}
 
                             <RoadMap.RightBox>
-                                <p>Connect your Wallet</p>
+                                <p>Q4 2024:</p>
 
                                 <span>
-                                    Use your crypto wallet to connect to our
-                                    platform
+                                    <b>Idea and Project Development:</b> <br />-
+                                    The concept and development of Flap Hero
+                                    will begin. The team will focus on creating
+                                    a solid foundation for the project and
+                                    outlining key gameplay mechanics.
                                 </span>
                             </RoadMap.RightBox>
 
                             <RoadMap.RightBox>
-                                <p>Choose your NFT WAR</p>
+                                <p>Q1 2025:</p>
 
                                 <span>
-                                    Complete the transaction and become the
-                                    proud owner of a unique, rebellious NFT WAR!
+                                    <b>Demo Version:</b> <br />- A demo version
+                                    of Flap Hero will be released to showcase
+                                    the core gameplay and features. <br />
+                                    <b>Pre-Sale Token: </b> <br />- The pre-sale
+                                    of the FPH$ token will be held to allow
+                                    early investors to purchase tokens before
+                                    the official listing. <br />
+                                    <b>Token Listing on DEX: </b> <br />- FPH$
+                                    tokens will be listed on decentralized
+                                    exchanges (DEX) for public trading. <br />
+                                    <b>Official Game Launch: </b> <br />- The
+                                    official release of the Flap Hero game will
+                                    take place, allowing players to experience
+                                    the full game and earn rewards.
                                 </span>
                             </RoadMap.RightBox>
 
                             <RoadMap.RightBox>
-                                <p>Purchase your NFT WAR</p>
+                                <p>Q2 2025:</p>
 
                                 <span>
-                                    Browse through the collection and find the
-                                    rebellious Viking that resonates with you.
+                                    <b>Hero Racing Feature Update:</b> <br />
+                                    - A new "Hero Racing" feature will be
+                                    introduced, adding exciting competitive
+                                    elements to the game. <br />
+                                    <b>Player Interface Redesign: </b>
+                                    <br />
+                                    - The user interface (UI) will be redesigned
+                                    to improve the gaming experience and make it
+                                    more user-friendly. <br />
+                                    <b>Expanded Marketing Campaign: </b> <br />-
+                                    The project will increase its marketing
+                                    efforts to reach a wider audience and
+                                    attract more players to the game.
                                 </span>
                             </RoadMap.RightBox>
 
                             <RoadMap.RightBox>
-                                <p>Receive your NFT WAR</p>
+                                <p>Q3 2025:</p>
 
                                 <span>
-                                    You can view your Viking in your wallet or
-                                    on our platform in the My Collrction
-                                    section.
+                                    <b>Mobile Version Launch:</b> <br />
+                                    - The mobile version of Flap Hero will be
+                                    released on Android and iOS, making the game
+                                    accessible to a broader player base. <br />
+                                    <b>Token Listing on CEX: </b>
+                                    <br />- FPH$ token will be listed on
+                                    centralized exchanges (CEX) to enhance
+                                    liquidity and exposure.
+                                </span>
+                            </RoadMap.RightBox>
+
+                            <RoadMap.RightBox>
+                                <p>Q4 2025:</p>
+
+                                <span>
+                                    <b>Mini-Game Development:</b> <br />
+                                    - The project will introduce mini-games
+                                    within the Flap Hero ecosystem, adding more
+                                    variety and fun for players. <br />
+                                    <b>
+                                        Project Expansion and Marketing Growth:
+                                    </b>
+                                    <br />- The team will continue to expand and
+                                    promote the project, reaching new
+                                    communities and increasing brand awareness.
                                 </span>
                             </RoadMap.RightBox>
                         </RoadMap.RightBoxContainer>
@@ -364,22 +474,68 @@ const Home = () => {
 
                         <FAQ.Right>
                             <Question
-                                title={t('Why should i buy the NFT WAR?')}
+                                title={t(
+                                    'What is the release date of Flap Hero?'
+                                )}
                                 description={t(
-                                    'Each NFT in the "NFT WAR" Collection is a work of art that exists in a single copy. You will own a unique digital creation that cannot be found anywhere else in the world NFT WAR is unique NFT collection where each NFT WAR embodies the spirt of rebelion and defiance.'
+                                    '- The project was launched on January 26, 2025.'
                                 )}
                             />
                             <Question
-                                title={t('Can I resell my NFT WAR?')}
-                                description={t(
-                                    'Yes, you can resell your NFT WAR on supported NFT marketplaces. Since each NFT in the collection is unique and exists as a single copy, its value may increase over time, depending on demand and rarity.'
-                                )}
+                                title={t('What is Flap Hero?')}
+                                description={
+                                    <span>
+                                        - Flap Hero is a game inspired by the
+                                        famous entertainment game Flappy Bird.
+                                        <br />- It is not only a Web 2 game, but
+                                        Flap Hero is also an exciting Web 3 game
+                                        that allows players to earn tokens while
+                                        playing.
+                                    </span>
+                                }
                             />
                             <Question
-                                title={t('How can I buy an NFT WAR?')}
-                                description={t(
-                                    "To buy an NFT WAR, you'll need to have a crypto wallet set up with sufficient funds (usually in Ethereum or another specified cryptocurrency). Then, visit the official platform or marketplace hosting the NFT WAR collection, connect your wallet, and follow the purchase process to acquire your unique NFT."
-                                )}
+                                title={t('Can NFTs in the game be traded?')}
+                                description='- Yes, you can trade NFTs in the game through the project’s marketplace.'
+                            />
+                            <Question
+                                title='On which platform is Flap Hero released?'
+                                description={
+                                    <span>
+                                        - Flap Hero is a P2E entertainment game
+                                        that we have released on the Telegram
+                                        BOT platform. <br />- However, there
+                                        will soon be other versions, such as web
+                                        and Android.
+                                    </span>
+                                }
+                            />
+                            <Question
+                                title='What is the FPH$ token, and how can it be earned?'
+                                description={
+                                    <span>
+                                        - FPH$ token is the governance token of
+                                        the project. <br />
+                                        - Players can earn it by overcoming
+                                        obstacles in the game.
+                                        <br />- The FPH$ token is listed at a
+                                        price of $0.0052 and was sold in the
+                                        pre-public round at a price of $0.005
+                                        per token.
+                                    </span>
+                                }
+                            />
+                            <Question
+                                title='I want to promote the project. Who can I contact, and is there any attractive program for KOLs?'
+                                description={
+                                    <span>
+                                        - Yes! You can take advantage of the
+                                        invite friends feature in the game to
+                                        earn a 5% commission. <br />- If you
+                                        have any further requests, please
+                                        contact Telegram: @Alex65923.
+                                    </span>
+                                }
                             />
                         </FAQ.Right>
                     </FAQ.Wrapper>
