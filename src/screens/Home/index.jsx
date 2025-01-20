@@ -44,7 +44,7 @@ const Home = () => {
 
                     <Theme.Right>
                         <h1>
-                            FLAP <br /> HERO
+                            FLAPP <br /> HERO
                         </h1>
 
                         <div>
@@ -67,14 +67,14 @@ const Home = () => {
             <Container id='about-us'>
                 <AboutUs.Container>
                     <AboutUs.Left>
-                        <Title>Flap Hero – The Unique Web 3 Game</Title>
+                        <Title>Flapp Hero – The Unique Web 3 Game</Title>
 
                         <p>
-                            Flap Hero is a game inspired by Flappy Bird,
+                            Flapp Hero is a game inspired by Flappy Bird,
                             combining Web 3 technology and Play-to-Earn (P2E)
                             features. Players can earn real tokens by overcoming
                             challenges and collecting exclusive NFTs. With fun
-                            graphics and challenging gameplay, Flap Hero offers
+                            graphics and challenging gameplay, Flapp Hero offers
                             an exciting gaming experience and the opportunity to
                             earn. Join now and become a hero in the sky!
                         </p>
@@ -377,7 +377,7 @@ const Home = () => {
 
                                 <span>
                                     <b>Idea and Project Development:</b> <br />-
-                                    The concept and development of Flap Hero
+                                    The concept and development of Flapp Hero
                                     will begin. The team will focus on creating
                                     a solid foundation for the project and
                                     outlining key gameplay mechanics.
@@ -389,7 +389,7 @@ const Home = () => {
 
                                 <span>
                                     <b>Demo Version:</b> <br />- A demo version
-                                    of Flap Hero will be released to showcase
+                                    of Flapp Hero will be released to showcase
                                     the core gameplay and features. <br />
                                     <b>Pre-Sale Token: </b> <br />- The pre-sale
                                     of the FPH$ token will be held to allow
@@ -399,7 +399,7 @@ const Home = () => {
                                     tokens will be listed on decentralized
                                     exchanges (DEX) for public trading. <br />
                                     <b>Official Game Launch: </b> <br />- The
-                                    official release of the Flap Hero game will
+                                    official release of the Flapp Hero game will
                                     take place, allowing players to experience
                                     the full game and earn rewards.
                                 </span>
@@ -430,7 +430,7 @@ const Home = () => {
 
                                 <span>
                                     <b>Mobile Version Launch:</b> <br />
-                                    - The mobile version of Flap Hero will be
+                                    - The mobile version of Flapp Hero will be
                                     released on Android and iOS, making the game
                                     accessible to a broader player base. <br />
                                     <b>Token Listing on CEX: </b>
@@ -446,7 +446,7 @@ const Home = () => {
                                 <span>
                                     <b>Mini-Game Development:</b> <br />
                                     - The project will introduce mini-games
-                                    within the Flap Hero ecosystem, adding more
+                                    within the Flapp Hero ecosystem, adding more
                                     variety and fun for players. <br />
                                     <b>
                                         Project Expansion and Marketing Growth:
@@ -475,22 +475,22 @@ const Home = () => {
                         <FAQ.Right>
                             <Question
                                 title={t(
-                                    'What is the release date of Flap Hero?'
+                                    'What is the release date of Flapp Hero?'
                                 )}
                                 description={t(
                                     '- The project was launched on January 26, 2025.'
                                 )}
                             />
                             <Question
-                                title={t('What is Flap Hero?')}
+                                title={t('What is Flapp Hero?')}
                                 description={
                                     <span>
-                                        - Flap Hero is a game inspired by the
+                                        - Flapp Hero is a game inspired by the
                                         famous entertainment game Flappy Bird.
                                         <br />- It is not only a Web 2 game, but
-                                        Flap Hero is also an exciting Web 3 game
-                                        that allows players to earn tokens while
-                                        playing.
+                                        Flapp Hero is also an exciting Web 3
+                                        game that allows players to earn tokens
+                                        while playing.
                                     </span>
                                 }
                             />
@@ -499,10 +499,10 @@ const Home = () => {
                                 description='- Yes, you can trade NFTs in the game through the project’s marketplace.'
                             />
                             <Question
-                                title='On which platform is Flap Hero released?'
+                                title='On which platform is Flapp Hero released?'
                                 description={
                                     <span>
-                                        - Flap Hero is a P2E entertainment game
+                                        - Flapp Hero is a P2E entertainment game
                                         that we have released on the Telegram
                                         BOT platform. <br />- However, there
                                         will soon be other versions, such as web

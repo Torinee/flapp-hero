@@ -10,10 +10,16 @@ export default function Page() {
     return (
         <MainLayout language={lang}>
             <Head>
-                <title>NFT WAR | Own a Unique Digital Masterpiece</title>
+                <title>FLAPP HERO</title>
                 <meta
                     name='description'
-                    content='Step into the rebellious world of NFT WAR, a collection of 10,000 hand-crafted digital masterpieces. Each NFT WAR is one of a kind, embodying the spirit of rebellion and individuality.'
+                    content='Flapp Hero is a game inspired by Flappy Bird,
+                            combining Web 3 technology and Play-to-Earn (P2E)
+                            features. Players can earn real tokens by overcoming
+                            challenges and collecting exclusive NFTs. With fun
+                            graphics and challenging gameplay, Flapp Hero offers
+                            an exciting gaming experience and the opportunity to
+                            earn. Join now and become a hero in the sky!'
                 />
             </Head>
             <Home />
