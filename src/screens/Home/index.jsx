@@ -64,7 +64,7 @@ const Home = () => {
                 </Container>
             </Theme.Container>
 
-            <Container>
+            <Container id='about-us'>
                 <AboutUs.Container>
                     <AboutUs.Left>
                         <Title>Flap Hero – The Unique Web 3 Game</Title>
@@ -86,7 +86,7 @@ const Home = () => {
                 </AboutUs.Container>
             </Container>
 
-            <Container>
+            <Container id='collection'>
                 <Collection.Container>
                     <Collection.ButtonLeft>
                         <button ref={prevButtonRef}>
@@ -352,7 +352,7 @@ const Home = () => {
                 </Play.Container>
             </Container>
 
-            <RoadMap.Container>
+            <RoadMap.Container id='roadmap'>
                 <Container>
                     <RoadMap.Left>
                         {!isMobile && (
@@ -461,7 +461,7 @@ const Home = () => {
                 </Container>
             </RoadMap.Container>
 
-            <Container>
+            <Container id='faqs'>
                 <FAQ.Container id='faqs'>
                     <Title>Faqs</Title>
 
