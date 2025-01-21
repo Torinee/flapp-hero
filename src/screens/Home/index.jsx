@@ -331,8 +331,15 @@ const Home = () => {
 
                         <CountDown />
 
-                        <Button size='lg' style={{ margin: 'auto' }}>
-                            BUY NOW
+                        <Button
+                            onClick={() =>
+                                (window.location.href =
+                                    'https://wallet.flapphero.xyz/')
+                            }
+                            size='lg'
+                            style={{ margin: 'auto' }}
+                        >
+                            BUY TOKEN NOW
                         </Button>
                     </Presale.Content>
 
