@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Navigation } from 'swiper/modules'
 
@@ -24,13 +24,26 @@ const Home = () => {
     const { t, isMobile } = useGlobalContext()
     const prevButtonRef = useRef(null)
     const nextButtonRef = useRef(null)
-    const swiperRef = useRef(null)
+    const prevRoadmapRef = useRef(null)
+    const nextRoadmapRef = useRef(null)
+    const swiperRoadmapRef = useRef(null)
 
     const getImage = (imageName) => `./images/${imageName}.png`
     const goJoinNow = () =>
         (window.location.href = 'https://t.me/BotGameFlappHero_bot?start=0000')
     const goWhitePaper = () =>
         (window.location.href = 'https://docs.flapphero.xyz/')
+
+    useEffect(() => {
+        if (swiperRoadmapRef.current) {
+            const slides =
+                swiperRoadmapRef.current.querySelectorAll('.swiper-slide')
+            const maxHeight = Math.max(
+                ...Array.from(slides).map((slide) => slide.offsetHeight)
+            )
+            slides.forEach((slide) => (slide.style.height = `${maxHeight}px`))
+        }
+    }, [])
 
     return (
         <>
@@ -108,7 +121,6 @@ const Home = () => {
                     </Collection.ButtonRight>
 
                     <Swiper
-                        ref={swiperRef}
                         slidesPerView={1}
                         modules={[Navigation, Autoplay]}
                         navigation={{
@@ -369,94 +381,153 @@ const Home = () => {
                     </RoadMap.Left>
 
                     <RoadMap.Right>
-                        <RoadMap.RightBoxContainer>
-                            {isMobile && <RoadMap.Title>ROADMAP</RoadMap.Title>}
+                        {isMobile && <RoadMap.Title>ROADMAP</RoadMap.Title>}
 
-                            <RoadMap.RightBox>
-                                <p>Q4 2024:</p>
+                        <Collection.ButtonLeft style={{ left: -30 }}>
+                            <button ref={prevRoadmapRef}>
+                                <ArrowCircleIcon
+                                    fillColor='#7A7A7A'
+                                    arrowColor='white'
+                                    width={40}
+                                />
+                            </button>
+                        </Collection.ButtonLeft>
+                        <Collection.ButtonRight style={{ right: -30 }}>
+                            <button ref={nextRoadmapRef}>
+                                <ArrowCircleIcon
+                                    fillColor='#7A7A7A'
+                                    arrowColor='white'
+                                    width={40}
+                                />
+                            </button>
+                        </Collection.ButtonRight>
 
-                                <span>
-                                    <b>Idea and Project Development:</b> <br />-
-                                    The concept and development of Flapp Hero
-                                    will begin. The team will focus on creating
-                                    a solid foundation for the project and
-                                    outlining key gameplay mechanics.
-                                </span>
-                            </RoadMap.RightBox>
+                        <Swiper
+                            ref={swiperRoadmapRef}
+                            slidesPerView={1}
+                            modules={[Navigation, Autoplay]}
+                            navigation={{
+                                prevEl: prevRoadmapRef.current,
+                                nextEl: nextRoadmapRef.current
+                            }}
+                            onBeforeInit={(swiper) => {
+                                swiper.params.navigation.prevEl =
+                                    prevRoadmapRef.current
+                                swiper.params.navigation.nextEl =
+                                    nextRoadmapRef.current
+                            }}
+                            loop={true}
+                            autoplay={{
+                                delay: 6000
+                            }}
+                        >
+                            <SwiperSlide>
+                                <RoadMap.RightBox>
+                                    <p>Q4 2024:</p>
 
-                            <RoadMap.RightBox>
-                                <p>Q1 2025:</p>
+                                    <span>
+                                        <b>Idea and Project Development:</b>{' '}
+                                        <br />- The concept and development of
+                                        Flapp Hero will begin. The team will
+                                        focus on creating a solid foundation for
+                                        the project and outlining key gameplay
+                                        mechanics.
+                                    </span>
+                                </RoadMap.RightBox>
+                            </SwiperSlide>
 
-                                <span>
-                                    <b>Demo Version:</b> <br />- A demo version
-                                    of Flapp Hero will be released to showcase
-                                    the core gameplay and features. <br />
-                                    <b>Pre-Sale Token: </b> <br />- The pre-sale
-                                    of the FPH$ token will be held to allow
-                                    early investors to purchase tokens before
-                                    the official listing. <br />
-                                    <b>Token Listing on DEX: </b> <br />- FPH$
-                                    tokens will be listed on decentralized
-                                    exchanges (DEX) for public trading. <br />
-                                    <b>Official Game Launch: </b> <br />- The
-                                    official release of the Flapp Hero game will
-                                    take place, allowing players to experience
-                                    the full game and earn rewards.
-                                </span>
-                            </RoadMap.RightBox>
+                            <SwiperSlide>
+                                <RoadMap.RightBox>
+                                    <p>Q1 2025:</p>
 
-                            <RoadMap.RightBox>
-                                <p>Q2 2025:</p>
+                                    <span>
+                                        <b>Demo Version:</b> <br />- A demo
+                                        version of Flapp Hero will be released
+                                        to showcase the core gameplay and
+                                        features. <br />
+                                        <b>Pre-Sale Token: </b> <br />- The
+                                        pre-sale of the FPH$ token will be held
+                                        to allow early investors to purchase
+                                        tokens before the official listing.{' '}
+                                        <br />
+                                        <b>Token Listing on DEX: </b> <br />
+                                        - FPH$ tokens will be listed on
+                                        decentralized exchanges (DEX) for public
+                                        trading. <br />
+                                        <b>Official Game Launch: </b> <br />-
+                                        The official release of the Flapp Hero
+                                        game will take place, allowing players
+                                        to experience the full game and earn
+                                        rewards.
+                                    </span>
+                                </RoadMap.RightBox>
+                            </SwiperSlide>
 
-                                <span>
-                                    <b>Hero Racing Feature Update:</b> <br />
-                                    - A new "Hero Racing" feature will be
-                                    introduced, adding exciting competitive
-                                    elements to the game. <br />
-                                    <b>Player Interface Redesign: </b>
-                                    <br />
-                                    - The user interface (UI) will be redesigned
-                                    to improve the gaming experience and make it
-                                    more user-friendly. <br />
-                                    <b>Expanded Marketing Campaign: </b> <br />-
-                                    The project will increase its marketing
-                                    efforts to reach a wider audience and
-                                    attract more players to the game.
-                                </span>
-                            </RoadMap.RightBox>
+                            <SwiperSlide>
+                                <RoadMap.RightBox>
+                                    <p>Q2 2025:</p>
 
-                            <RoadMap.RightBox>
-                                <p>Q3 2025:</p>
+                                    <span>
+                                        <b>Hero Racing Feature Update:</b>{' '}
+                                        <br />- A new "Hero Racing" feature will
+                                        be introduced, adding exciting
+                                        competitive elements to the game. <br />
+                                        <b>Player Interface Redesign: </b>
+                                        <br />
+                                        - The user interface (UI) will be
+                                        redesigned to improve the gaming
+                                        experience and make it more
+                                        user-friendly. <br />
+                                        <b>
+                                            Expanded Marketing Campaign:{' '}
+                                        </b>{' '}
+                                        <br />- The project will increase its
+                                        marketing efforts to reach a wider
+                                        audience and attract more players to the
+                                        game.
+                                    </span>
+                                </RoadMap.RightBox>
+                            </SwiperSlide>
 
-                                <span>
-                                    <b>Mobile Version Launch:</b> <br />
-                                    - The mobile version of Flapp Hero will be
-                                    released on Android and iOS, making the game
-                                    accessible to a broader player base. <br />
-                                    <b>Token Listing on CEX: </b>
-                                    <br />- FPH$ token will be listed on
-                                    centralized exchanges (CEX) to enhance
-                                    liquidity and exposure.
-                                </span>
-                            </RoadMap.RightBox>
+                            <SwiperSlide>
+                                <RoadMap.RightBox>
+                                    <p>Q3 2025:</p>
 
-                            <RoadMap.RightBox>
-                                <p>Q4 2025:</p>
+                                    <span>
+                                        <b>Mobile Version Launch:</b> <br />
+                                        - The mobile version of Flapp Hero will
+                                        be released on Android and iOS, making
+                                        the game accessible to a broader player
+                                        base. <br />
+                                        <b>Token Listing on CEX: </b>
+                                        <br />- FPH$ token will be listed on
+                                        centralized exchanges (CEX) to enhance
+                                        liquidity and exposure.
+                                    </span>
+                                </RoadMap.RightBox>
+                            </SwiperSlide>
 
-                                <span>
-                                    <b>Mini-Game Development:</b> <br />
-                                    - The project will introduce mini-games
-                                    within the Flapp Hero ecosystem, adding more
-                                    variety and fun for players. <br />
-                                    <b>
-                                        Project Expansion and Marketing Growth:
-                                    </b>
-                                    <br />- The team will continue to expand and
-                                    promote the project, reaching new
-                                    communities and increasing brand awareness.
-                                </span>
-                            </RoadMap.RightBox>
-                        </RoadMap.RightBoxContainer>
+                            <SwiperSlide>
+                                <RoadMap.RightBox>
+                                    <p>Q4 2025:</p>
+
+                                    <span>
+                                        <b>Mini-Game Development:</b> <br />
+                                        - The project will introduce mini-games
+                                        within the Flapp Hero ecosystem, adding
+                                        more variety and fun for players. <br />
+                                        <b>
+                                            Project Expansion and Marketing
+                                            Growth:
+                                        </b>
+                                        <br />- The team will continue to expand
+                                        and promote the project, reaching new
+                                        communities and increasing brand
+                                        awareness.
+                                    </span>
+                                </RoadMap.RightBox>
+                            </SwiperSlide>
+                        </Swiper>
                     </RoadMap.Right>
                 </Container>
             </RoadMap.Container>

@@ -424,29 +424,27 @@ export const RoadMap = {
         }
     `,
     Right: styled.div`
+        position: relative;
         width: 50%;
+        display: flex;
+        align-items: center;
 
         @media (max-width: 992px) {
             width: 100%;
-        }
-    `,
-    RightBoxContainer: styled.div`
-        max-width: 400px;
-        padding: 50px 0;
-        margin: auto;
+            flex-direction: column;
+            gap: 30px;
+            padding-top: 50px;
 
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-
-        @media (max-width: 992px) {
-            padding: 50px 0 0 0;
+            > div {
+                width: 100%;
+            }
         }
     `,
     RightBox: styled.div`
         background: white;
         border-radius: 30px;
         padding: 20px;
+        height: 100%;
 
         > p {
             font-size: 28px;
@@ -517,6 +515,10 @@ export const FAQ = {
             gap: 10px;
             font-weight: 700;
             font-size: 16px;
+
+            > svg {
+                flex: 0 0 20px;
+            }
         }
         > div {
             > p {
