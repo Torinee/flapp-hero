@@ -1,11 +1,9 @@
 import React from 'react'
 import { Footer } from './MainLayout.styled'
 import Container from '../Container'
-import FacebookIcon from '@/images/FacebookIcon'
-import InstagramIcon from '@/images/InstagramIcon'
 import TwitterIcon from '@/images/TwitterIcon'
-import YoutubeIcon from '@/images/YoutubeIcon'
 import Button from '../Button'
+import XIcon from '@/images/XIcon'
 
 const FooterContainer = () => {
     const goJoinNow = () =>
@@ -23,10 +21,15 @@ const FooterContainer = () => {
                         </span>
 
                         <div>
-                            <FacebookIcon />
-                            <InstagramIcon />
-                            <TwitterIcon />
-                            <YoutubeIcon />
+                            <a href='https://t.me/Flappherochat'>
+                                <TwitterIcon />
+                            </a>
+                            <a href='https://t.me/Flapphero'>
+                                <TwitterIcon />
+                            </a>
+                            <a href='https://x.com/Flapphero'>
+                                <XIcon />
+                            </a>
                         </div>
                     </Footer.LeftSocial>
                 </Footer.Left>
@@ -35,7 +38,7 @@ const FooterContainer = () => {
                     <Footer.RightButton>
                         <img src='/images/home-footer.png' />
                         <Button size='lg' onClick={goJoinNow}>
-                            JOIN NOW
+                            PLAY NOW
                         </Button>
                     </Footer.RightButton>
 

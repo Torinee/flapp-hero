@@ -12,8 +12,8 @@ const ContainerWidth = styled.div`
     }
 `
 
-const Container = ({ children }) => {
-    return <ContainerWidth>{children}</ContainerWidth>
+const Container = ({ children, ...rest }) => {
+    return <ContainerWidth {...rest}>{children}</ContainerWidth>
 }
 
 export default Container

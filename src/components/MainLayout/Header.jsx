@@ -6,6 +6,7 @@ import Button from '../Button'
 
 const HeaderContainer = () => {
     const scrollToElement = (id) => {
+        console.log('id', id)
         const element = document.getElementById(id)
         const offset = 100
         const elementPosition =
@@ -60,7 +61,7 @@ const HeaderContainer = () => {
                     <Button outline='white' hideIcon onClick={goPrivateSale}>
                         Private Sale
                     </Button>
-                    <Button onClick={goJoinNow}>JOIN NOW</Button>
+                    <Button onClick={goJoinNow}>PLAY NOW</Button>
                 </Header.Right>
             </Container>
         </Header.Container>

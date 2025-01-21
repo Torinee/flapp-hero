@@ -68,9 +68,11 @@ export const Footer = {
         }
     `,
     LeftSocial: styled.div`
-        font-size: 40px;
-        font-weight: 700;
-        text-align: center;
+        > span {
+            font-size: 40px;
+            font-weight: 700;
+            text-align: center;
+        }
 
         > div {
             display: flex;

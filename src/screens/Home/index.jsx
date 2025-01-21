@@ -35,6 +35,7 @@ const Home = () => {
         (window.location.href = 'https://docs.flapphero.xyz/')
 
     useEffect(() => {
+        // make all swiperslide same height
         if (swiperRoadmapRef.current) {
             const slides =
                 swiperRoadmapRef.current.querySelectorAll('.swiper-slide')
@@ -62,7 +63,7 @@ const Home = () => {
 
                         <div>
                             <Button size='lg' onClick={goJoinNow}>
-                                JOIN NOW
+                                PLAY NOW
                             </Button>
                             <Button
                                 size='lg'
